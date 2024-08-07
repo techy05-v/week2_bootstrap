@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="icon" href="assests/favicon/icons8-bootstrap-48.png">
+    <link rel="stylesheet" href="assests/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- INCLUDING 'highlight.js' TO DISPLAY CODE AND DISPLAY -->
+    <!-- Style for the library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-xxl">
+                <div class="mx-5 d-lg-none
+                ">&#10240;</div>
+                <!-- Navabar brand -->
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="#">
+                        <img class="image" src="assests/icons/icons8-bootstrap-black.png" alt="Bootstrap" width="45"
+                            height="45">
+                    </a>
+                    <!-- Offcanvas content -->
+                    <div class="offcanvas offcanvas-end" id="offcanvas-navbar" tabindex="-1">
+                        <!-- Offcanvas header -->
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title">Bootstrap</h5>
+                            <button type="button" class="btn-close btn-close-white"
+                                data-bs-dismiss="offcanvas"></button>
+                        </div>
+                        <!-- Offcanvas body -->
+                        <hr class="d-lg-none" />
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Docs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Icons</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Examples</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Themes</a>
+                                </li>
+                                <hr class="d-lg-none" />
+                                <li class="nav-item d-lg-none">
+                                    <a href="" class="nav-link">GitHub</a>
+                                </li>
+                                <li class="nav-item d-lg-none">
+                                    <a href="" class="nav-link">Twitter</a>
+                                </li>
+                                <li class="nav-item d-lg-none">
+                                    <a href="" class="nav-link">Open Collective</a>
+                                </li>
+                                <hr class="d-lg-none" />
+                                <!-- Dropdown button -->
+                                <li class="nav-item dropdown d-lg-none">
+                                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Bootstrap v5.3
+                                    </a>
+                                    <!-- Dropdown content -->
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="" class="dropdown-item offcanvas-drop-item">Latest (5.3x)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="dropdown-item offcanvas-drop-item">Version 4.0
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <hr class="d-lg-none" />
+                                <li class="nav-item dropdown d-lg-none">
+                                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Toggle
+                                        theme</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="" class="dropdown-item offcanvas-drop-item">Light
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="dropdown-item offcanvas-drop-item">Dark
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass icon fs-3 d-lg-none"></i>
+                    <!-- Button to toggle offcanvas -->
+                    <button class="navbar-toggler fs-3 ms-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvas-navbar"><i class="fa-solid fa-ellipsis icon"></i></button>
+                </div>
+                <!-- Search bar -->
+                <form class="d-none d-lg-flex" role="search">
+                    <input class="form-control me-2 search border" type="search" placeholder="Search" data-bs-toggle="modal" data-bs-target="#search-modal">
+                </form>
+                <div class="d-none d-lg-flex align-items-center gap-3 mx-4">
+                    <div class="d-lg-flex gap-2 border-end px-3">
+                        <a href=""><i class="fa-brands fa-github navbar-drop-item"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter navbar-drop-item"></i></a>
+                        <a href=""><i class="fa-solid fa-o navbar-drop-item"></i></a>
+                    </div>
+                    <div class="nav-item dropdown d-none d-lg-block border-end px-3">
+                        <a href="" class="nav-link dropdown-toggle navbar-drop-item" data-bs-toggle="dropdown">v5.3
+                        </a>
+                        <!-- Dropdown content -->
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="" class="dropdown-item">Latest (5.3x)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item">Version 4.0
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown d-none d-lg-block">
+                        <a href="" class="nav-link dropdown-toggle navbar-drop-item" data-bs-toggle="dropdown"><i
+                                class="fa-solid fa-circle-half-stroke "></i></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="" class="dropdown-item">Light
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item">Dark
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <div class="modal fade" id="search-modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body d-flex align-items-center">
+                        <input class="form-control search border me-3" placeholder="Search" type="search">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main -->
+    <main>
+        <div class="main-container mt-4">
+            <!-- Gradient background -->
+            <div class="gradient"></div>
+            <!-- Main text and links -->
+            <div class="main-details justify-content-center g-0 row">
+                <div class="d-flex justify-content-center mx-3 w-100 mt-5">
+                    <p class="fs-6 rounded-5 p-2 text-center shadow-sm main-update">Get Security
+                        Updates for Bootstrap 3 & 4 &rarr;</p>
+                </div>
+                <div class="text-center w-100 d-none d-sm-block col-sm-10 mt-2 mb-3">
+                    <img src="assests/images/Bootstrap_logo.svg.png" alt="Bootstrap logo" style="width: 150px"
+                        height="130px">
+                </div>
+                <div class="text-center w-100 d-flex justify-content-center">
+                    <h1 class="fw-bolder col-10  col-sm-6 col-lg-5 fs-1">Build fast, responsive sites with
+                        Bootstrap</h1>
+                </div>
+                <div class="text-center d-flex justify-content-center w-100">
+                    <p class="text-black-50 col-10 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-3 fs-6">Powerful,
+                        extensible, and
+                        feature-packed frontend
+                        toolkit.
+                        Build
+                        and customize
+                        with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful
+                        JavaScript plugins.</p>
+                </div>
+                <p class="fs-5 col-10 col-sm-7 col-lg-4 col-xl-3 col-xxl-3 rounded-2 p-3 text-center border main-updt-details me-lg-4 code-version
+                     terminal-font shadow-sm">
+                    $
+                    npm i
+                    bootstrap@5.3.3</p>
+                <a
+                    class="doc-btn nav-link btn col-10 col-sm-7 col-lg-3 col-xl-3 col-xxl-2 rounded-2 py-3 text-white text-bold fw-bold fs-4 mb-3"><img
+                        class="me-3 mb-2 image" src="assests/icons/icons8-book-64.png" width="25" height="20"
+                        alt="">Read the docs</a>
+                <p class="d-flex justify-content-center flex-wrap gap-2">Currently<b> v5.3.3</b> &centerdot;<u><a
+                            href="" class="text-black-50 nav-link"> Download</a></u> &centerdot; <u><a href=""
+                            class="text-black-50 nav-link">All releases</a></u></p>
+            </div>
+        </div>
+        <!-- Main Detail Section -->
+        <!-- Head Session - 1-->
+        <div class="head-container mt-5 ms-3 d-flex justify-content-lg-center">
+            <!-- icon -->
+            <div class="head-symbol-1 d-flex rounded-4 justify-content-center align-items-center head-icon">
+                <i class="fa-solid fa-code fs-2"></i>
+            </div>
+        </div>
+        <div class="container-xxl mt-5">
+            <div class="row justify-content-center">
+                <h1 class="text-lg-center"><b>Get started any way you want</b></h1>
+                <p class="fs-4 col-lg-8 text-lg-center">Jump right into building with Bootstrap—use the CDN, install it
+                    via package manager, or download the source code.</p>
+                <a href="" class="fs-5 text-lg-center"><b>Read installation docs &rarr;</b></a>
+                <!-- Code section A 1/2 -->
+                <div class="justify-content-between row w-100">
+                    <div class="border-end col-lg-6 mt-5 pe-lg-5">
+                        <img src="assests/icons/icons8-package-50.png" alt="" width="" height="">
+                        <h3>Install via package manager</h3>
+                        <p>Install Bootstrap’s source Sass and JavaScript files via npm, RubyGems, Composer, or Meteor.
+                            Package managed installs don’t include documentation or our full build scripts. You can also
+                            <a href="">use any demo from our Examples repo</a> to quickly jumpstart Bootstrap projects.
+                        </p>
+                        <p class="fs-5 rounded-2 p-3 text-center border main-updt-details code-version
+                         terminal-font shadow-sm">
+                            $ npm install bootstrap@5.3.3</p>
+                        <p class="fs-5 rounded-2 p-3 text-center border main-updt-details code-version
+                         terminal-font shadow-sm">
+                            $
+                            gem install bootstrap -v 5.3.3</p>
+                        <p><a href="">Read our Code docs</a> for more info and additional package managers.</p>
+                    </div>
+                    <!-- Code section A 2/2 -->
+                    <div class="col-lg-6 mt-5 ps-lg-5">
+                        <img src="assests/icons/icons8-globe-50.png" alt="" width="" height="">
+                        <h3>Include via CDN</h3>
+                        <p>When you only need to include Bootstrap’s compiled CSS or JS, you can use <a
+                                href="">jsDelivr</a>. See it in action with our simple <a href="">quick start</a>, or <a
+                                href="">browse the examples</a> to jumpstart your next project. You can also choose to
+                            include Popper and our JS <a href="">separately</a>.</p>
+                        <pre class=""><code class="html fs-6 rounded-2 border main-updt-details code-version
+                             terminal-font shadow-sm overflow-x-scroll p-0 ">
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH&quot; crossorigin=&quot;anonymous&quot;&gt;
+                        </code></pre>
+                        <pre class=""><code class="html fs-6 rounded-2 border main-updt-details code-version
+                            terminal-font shadow-sm overflow-x-scroll p-0 ">
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+                       </code></pre>
+                    </div>
+                    <!-- Bootstrap source file details -->
+                    <div class="d-flex flex-column align-items-center pt-5">
+                        <h3>Read our getting started guides</h3>
+                        <p>Get a jump on including Bootstrap's source files in a new project with our official guides.
+                        </p>
+                        <div class="d-flex gap-4">
+                            <div class="text-center">
+                                <img src="assests/icons/icons8-webpack-48.png" alt="Webpack" width="78" height="70">
+                                <p class="text-black-50">Webpack</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="assests/icons/icons8-package-48.png" alt="Package" width="78" height="70">
+                                <p class="text-black-50">Package</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="assests/icons/icons8-thunder-16.png" alt="Thunder" width="78" height="70">
+                                <p class="text-black-50">Vite</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Head Session - 2 -->
+        <div class="head-container container-xxl mt-5">
+            <!-- Icon -->
+            <div class="head-symbol-2 d-flex rounded-4 justify-content-center align-items-center head-icon mb-3">
+                <i class="fa-solid fa-swatchbook fs-2"></i>
+            </div>
+            <h1 class=""><b>Customize everything with Sass</b></h1>
+            <p class="fs-4">Bootstrap utilizes Sass for a modular and customizable architecture. Import only the
+                components you need, enable global options like gradients and shadows, and write your own CSS with our
+                variables, maps, functions, and mixins.</p>
+            <a href="" class="fs-5"><b>Learn more about customizing &rarr;</b></a>
+            <div class="row">
+                <!-- Code section B 1/2 -->
+                <div class="col-lg-6 mt-5 border-end pe-lg-5">
+                    <h3>Include all of Bootstrap’s Sass</h3>
+                    <p>Import one stylesheet and you're off to the races with every feature of our CSS.</p>
+                    <pre class=""><code class="css fs-6 rounded-2 border main-updt-details code-version
+                         terminal-font shadow-sm overflow-x-scroll p-0 ">
+    // Variable overrides first
+    $primary: #900;
+    $enable-shadows: true;
+    $prefix: &quot;mo-&quot;;
+
+    // Then import Bootstrap
+    @import &quot;../node_modules/bootstrap/scss/bootstrap&quot;;
+                    </code></pre>
+                    <p>Learn more about our <a href="">global Sass options</a>.</p>
+                </div>
+                <!-- Code section B 2/2 -->
+                <div class="col-lg-6 mt-5 ps-lg-5">
+                    <h3>Include what you need</h3>
+                    <p>The easiest way to customize Bootstrap—include only the CSS you need.</p>
+                    <pre class=""><code class="css fs-6 rounded-2 border main-updt-details code-version
+                         terminal-font shadow-sm overflow-x-scroll p-0 ">
+    // Functions first
+    @import &quot;../node_modules/bootstrap/scss/functions&quot;;
+    
+    // Variable overrides second
+    $primary: #900;
+    $enable-shadows: true;
+    $prefix: &quot;mo-&quot;;
+    
+    // Required Bootstrap imports
+    @import &quot;../node_modules/bootstrap/scss/variables&quot;;
+    @import &quot;../node_modules/bootstrap/scss/variables-dark&quot;;
+    @import &quot;../node_modules/bootstrap/scss/maps&quot;;
+    @import &quot;../node_modules/bootstrap/scss/mixins&quot;;
+    @import &quot;../node_modules/bootstrap/scss/root&quot;;
+    
+    // Optional components
+    @import &quot;../node_modules/bootstrap/scss/utilities&quot;;
+    @import &quot;../node_modules/bootstrap/scss/reboot&quot;;
+    @import &quot;../node_modules/bootstrap/scss/containers&quot;;
+    @import &quot;../node_modules/bootstrap/scss/grid&quot;;
+    @import &quot;../node_modules/bootstrap/scss/helpers&quot;;
+    @import &quot;../node_modules/bootstrap/scss/utilities/api&quot;;
+                    </code></pre>
+                    <p>Learn more about <a href="">using Bootstrap with Sass.</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Head Session - 3 -->
+        <div class="head-container container-xxl mt-5">
+            <!-- Icon -->
+            <div class="head-symbol-3 d-flex rounded-4 justify-content-center align-items-center head-icon mb-3">
+                <p class="fs-3 pt-2">{ }</p>
+            </div>
+            <h1 class=""><b>Build and extend in real-time with CSS variables</b></h1>
+            <p class="fs-4">Bootstrap 5 is evolving with each release to better utilize CSS variables for global theme
+                styles, individual components, and even utilities. We provide dozens of variables for colors, font
+                styles, and more at a <code>:root</code> level for use anywhere. On components and utilities, CSS
+                variables are scoped to the relevant class and can easily be modified.
+            </p>
+            <a href="" class="fs-5"><b>Learn more about CSS variables &rarr;</b></a>
+            <div class="row">
+                <!-- Code section C 1/2 -->
+                <div class="col-lg-6 mt-5 border-end pe-lg-5">
+                    <h3>Using CSS variables</h3>
+                    <p>Use any of our <a href="">global :root variables</a> to write new styles. CSS variables use the
+                        <code>var(--bs-variableName)</code> syntax and can be inherited by children elements.</p>
+                    <pre class=""><code class="css fs-6 rounded-2 border main-updt-details code-version
+                         terminal-font shadow-sm overflow-x-scroll p-0 ">
+    .component {
+    color: var(--bs-gray-800);
+    background-color: var(--bs-gray-100);
+    border: 1px solid var(--bs-gray-200);
+    border-radius: .25rem;
+    }
+    
+    .component-header {
+    color: var(--bs-purple);
+    }
+                    </code></pre>
+                </div>
+                <!-- Code section C 2/2 -->
+                <div class="col-lg-6 mt-5 ps-lg-5">
+                    <h3>Customizing via CSS variables</h3>
+                    <p>Override global, component, or utility class variables to customize Bootstrap just how you like.
+                        No need to redeclare each rule, just a new variable value.</p>
+                    <pre class=""><code class="css fs-6 rounded-2 border main-updt-details code-version
+                         terminal-font shadow-sm overflow-x-scroll p-0 ">
+    body {
+    --bs-body-font-family: var(--bs-font-monospace);
+    --bs-body-line-height: 1.4;
+    --bs-body-bg: var(--bs-gray-100);
+    }
+    
+    .table {
+    --bs-table-color: var(--bs-gray-600);
+    --bs-table-bg: var(--bs-gray-100);
+    --bs-table-border-color: transparent;
+    }
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Head session - 4 -->
+        <div class="head-container container-xxl mt-5">
+            <div class="d-flex gap-3 align-items-center">
+                <!-- Icon -->
+                <div class="head-symbol-4 d-flex rounded-4 justify-content-center align-items-center head-icon mb-3">
+                    <i class="fa-solid fa-bars-progress fs-2"></i>
+                </div>
+                <p class="fs-2 text-black-50"> + </p>
+                <!-- Icon -->
+                <div class="head-symbol-5 d-flex rounded-4 justify-content-center align-items-center head-icon mb-3">
+                    <p class="fs-2 pt-3">{*}</p>
+                </div>
+            </div>
+            <h1 class=""><b>Components, meet the Utility API</b></h1>
+            <p class="fs-4">New in Bootstrap 5, our utilities are now generated by our <a href="">Utility API</a>. We
+                built it as a feature-packed Sass map that can be quickly and easily customized. It's never been easier
+                to add, remove, or modify any utility classes. Make utilities responsive, add pseudo-class variants, and
+                give them custom names.
+            </p>
+            <h3>Quickly customize components</h3>
+                    <p class="col-lg-8">Apply any of our included utility classes to our components to customize their appearance, like
+                        the navigation example below. There are hundreds of classes available—from <a
+                            href="">positioning</a> and <a href="">sizing</a> to <a href="">colors</a> and <a
+                            href="">effects</a>. Mix them with CSS variable overrides for even more control.</p>
+            <div class="row">
+                <!-- Code section D 1/2 -->
+                <div class="col-lg-6 mt-5 border-end pe-lg-5">
+                    <div class="border rounded-3 p-4">
+                        <!-- Navigation pill - 1 -->
+                        <ul class="nav nav-pills gap-2 p-1 rounded-2 mb-4"
+                            style="--bs-nav-link-color: var(--bs-primary); --bs-nav-pills-link-active-color: var(--bs-white); --bs-nav-pills-link-active-bg: var(--bs-primary);">
+                            <li class="nav-item">
+                                <button class="nav-link active rounded-2" data-bs-toggle="tab"
+                                    type="button">Home</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link rounded-2" data-bs-toggle="tab" type="button">Profile</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link rounded-2" data-bs-toggle="tab" type="button">Contact</button>
+                            </li>
+                        </ul>
+                        <!-- Navigation pill - 2 -->
+                        <ul class="nav nav-pills nav-fill gap-2 p-1 bg-primary rounded-5 shadow-sm"
+                            style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+                            <li class="nav-item">
+                                <button class="nav-link active rounded-5" data-bs-toggle="tab"
+                                    type="button">Home</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link rounded-5" data-bs-toggle="tab" type="button">Profile</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link rounded-5" data-bs-toggle="tab" type="button">Contact</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <pre class="mt-3"><code class="html fs-6 rounded-2 border main-updt-details code-version
+                         terminal-font shadow-sm overflow-x-scroll p-0 ">
+    &lt;ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);"&gt;
+    &lt;li class="nav-item" role="presentation"&gt;
+        &lt;button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true"&gt;Home&lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item" role="presentation"&gt;
+        &lt;button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"&gt;Profile&lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item" role="presentation"&gt;
+        &lt;button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"&gt;Contact&lt;/button&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+                    </code></pre>
+                    <p><a href="">Explore customized components &rarr;</a></p>
+                </div>
+                <!-- Code section D 2/2 -->
+                <div class="col-lg-6 mt-5 ps-lg-5">
+                    <h3>Create and extend utilities</h3>
+                    <p>Use Bootstrap's utility API to modify any of our included utilities or create your own custom
+                        utilities for any project. Import Bootstrap first, then use Sass map functions to modify, add,
+                        or remove utilities.
+                    </p>
+                    <pre class=""><code class="css fs-6 rounded-2 border main-updt-details code-version
+                         terminal-font shadow-sm overflow-x-scroll p-0 ">
+    @import "bootstrap/scss/bootstrap";
+
+    $utilities: map-merge(
+    $utilities,
+    (
+        "cursor": (
+        property: cursor,
+        class: cursor,
+        responsive: true,
+        values: auto pointer grab,
+        )
+    )
+    );
+                    </code></pre>
+                    <p><a href="">Explore the utility API &rarr;</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Head Session - 5 -->
+        <div class="head-container container-xxl mt-5">
+            <!-- Icon -->
+            <div class="head-symbol-6 d-flex rounded-4 justify-content-center align-items-center head-icon mb-3">
+                <i class="fa-solid fa-plug fs-2"></i>
+            </div>
+            <h1 class=""><b>Powerful JavaScript plugins without jQuery</b></h1>
+            <p class="fs-4">Add toggleable hidden elements, modals and offcanvas menus, popovers and tooltips, and so much more—all without jQuery. Bootstrap's JavaScript is HTML-first, meaning most plugins are added with <code>data</code> attributes in your HTML. Need more control? Include individual plugins programmatically.
+            </p>
+            <a href="" class="fs-5"><b>Learn more about Bootstrap JavaScript &rarr;</b></a>
+            <div class="row">
+                <!-- Code section E 1/2 -->
+                <div class="col-lg-6 mt-5 border-end pe-lg-5">
+                    <h3>Data attribute API</h3>
+                    <p>Why write more JavaScript when you can write HTML? Nearly all of Bootstrap's JavaScript plugins feature a first-class data API, allowing you to use JavaScript just by adding <code>data</code> attributes.
+                    </p>
+                    <!-- Dropdown demo -->
+                    <div class="dropdown border py-4 ps-3 rounded-3">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                          Dropdown
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><button class="dropdown-item" type="button">Dropdown item</button></li>
+                          <li><button class="dropdown-item" type="button">Dropdown item</button></li>
+                          <li><button class="dropdown-item" type="button">Dropdown item</button></li>
+                        </ul>
+                    </div>
+                    <pre class="mt-4"><code class="html fs-6 rounded-2 border main-updt-details code-version
+                            terminal-font shadow-sm overflow-x-scroll p-0 ">
+    &lt;div class="dropdown"&gt;
+    &lt;button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+        Dropdown
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Dropdown item&lt;/button&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Dropdown item&lt;/button&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Dropdown item&lt;/button&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/div&gt;
+                    </code></pre>
+                    <p class="">Learn more about <a href="">our JavaScript as modules</a> and <a href="">using the programmatic API</a>.</p>
+                </div>
+                <!-- Information section E 2/2 -->
+                <div class="col-lg-6 mt-5 ps-lg-5">
+                    <h3>Comprehensive set of plugins</h3>
+                    <p>Bootstrap features a dozen plugins that you can drop into any project. Drop them in all at once, or choose just the ones you need.</p>
+                    <hr />
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <h5><b>Alrert</b></h5>
+                            <p>Show and hide alert messages to your users.</p>  
+                        </div>
+                        <div class="col-sm-6">
+                            <h5><b>Button</b></h5>
+                            <p>Programmatically control the active state for buttons.</p>  
+                        </div>
+                        <div class="col-sm-6">
+                            <h5><b>Carousel</b></h5>
+                            <p>Add slideshows to any page, including support for crossfade.</p>  
+                        </div>
+                        <div class="col-sm-6">
+                            <h5><b>Collapse</b></h5>
+                            <p>Expand and collapse areas of content, or create accordions.</p>  
+                        </div>
+                        <div class="col-sm-6">
+                            <h5><b>Dropdown</b></h5>
+                            <p>Create menus of links, actions, forms, and more.</p>  
+                        </div>
+                        <div class="col-sm-6">
+                            <h5><b>Modal</b></h5>
+                            <p>Add flexible and responsive dialogs to your project.</p>  
+                        </div>
+                        <div class="col-sm-6">
+                            <h5><b>Offcanvas</b></h5>
+                            <p>Build and toggle hidden sidebars into any page.</p>  
+                        </div>
+                        <div class="col-sm-6">
+                            <h5><b>Popover</b></h5>
+                            <p>Create custom overlays. Built on Popper.</p>  
+                        </div>
+                        <div class="col-sm-6">
+                            <h5><b>Scrollspy</b></h5>
+                            <p>Automatically update active nav links based on page scroll.</p>  
+                        </div>
+                        <div class="col-sm-6">
+                            <h5><b>Tab</b></h5>
+                            <p>Allow Bootstrap nav components to toggle contents.</p>  
+                        </div>
+                        <div class="col-sm-6">
+                            <h5><b>Toast</b></h5>
+                            <p>Show and hide notifications to your visitors.</p>  
+                        </div>
+                        <div class="col-sm-6">
+                            <h5><b>Tooltip</b></h5>
+                            <p>Replace browser tooltips with custom ones. Built on Popper.</p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Head Session - 6 -->
+        <div class="container-xxl mt-5 pt-5">
+            <!-- Icon -->
+             <div class="row">
+                <div class="col-lg-6">
+                    <div class="head-symbol-7 d-flex rounded-4 justify-content-center align-items-center head-icon mb-3">
+                        <i class="fa-solid fa-circle fs-2"></i>
+                    </div>
+                    <h1 class=""><b>Personalize it with Bootstrap Icons</b></h1>
+                    <p class="fs-4"><a href="">Bootstrap Icons</a> is an open source SVG icon library featuring over 1,800 glyphs, with more added every release. They're designed to work in any project, whether you use Bootstrap itself or not. Use them as SVGs or icon fonts—both options give you vector scaling and easy customization via CSS.</p>
+                    <a href="" class="fs-5"><b>Get Bootstrap Icons &rarr;</b></a>
+                </div>
+                <!-- Image - 1 -->
+                 <div class="col-lg-6 mt-5 mt-lg-5">
+                    <img class="img-fluid" src="assests/images/bootstrap-icons.png" alt="Bootstrap possibilities" width="665" height="400">
+                 </div>
+             </div>
+        </div>
+        <!-- Head Session - 6 -->
+        <div class="container-xxl mt-5">
+            <!-- Icon -->
+             <div class="row">
+                <div class="col-lg-6">
+                    <div class="head-symbol-1 d-flex rounded-4 justify-content-center align-items-center head-icon mb-3">
+                        <i class="fa-solid fa-droplet fs-2"></i>
+                    </div>
+                    <h1 class=""><b>Make it yours with official Bootstrap Themes</b></h1>
+                    <p class="fs-4">Take Bootstrap to the next level with premium themes from the <a href="">official Bootstrap Themes marketplace</a>. Themes are built on Bootstrap as their own extended frameworks, rich with new components and plugins, documentation, and powerful build tools.</p>
+                    <a href="" class="fs-5"><b>Browse Bootstrap Themes &rarr;</b></a>
+                </div>
+                <!-- Image - 2 -->
+                 <div class="col-lg-6 mt-5 mt-lg-5">
+                    <img class="img-fluid" src="assests/images/bootstrap-themes.png" alt="Bootstrap themes" width="665" height="400">
+                 </div>
+             </div>
+        </div>         
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-body-tertiary">
+        <div class="container-xxl mt-2 p-5">
+            <div class="row">
+                <div class="col-10 col-lg-4 mt-3">
+                    <div class="d-flex gap-2">
+                        <img src="assests/icons/icons8-bootstrap-black.png" alt="bootstrap logo">
+                        <p class="mt-3 fs-5">Bootstrap</p>
+                    </div>
+                    <small>Designed and built with all the love in the world by the Bootstrap team with the help of our contributors.</small>
+                    <small>Code licensed MIT, docs CC BY 3.0.</small>
+                    <p class="text-black-50">Currently v5.3.3.</p>
+                </div>
+                <div class="col-6 col-lg-2 mt-3">
+                    <p class="fs-5"><b class="text-black-50">Links</b></p>
+                    <p><a href="" class="nav-link">Home</a></p>
+                    <p><a href="" class="nav-link">Docs</a></p>
+                    <p><a href="" class="nav-link">Examples</a></p>
+                    <p><a href="" class="nav-link">Icons</a></p>
+                    <p><a href="" class="nav-link">Themes</a></p>                                             
+                    <p><a href="" class="nav-link">Blog</a></p>
+                    <p><a href="" class="nav-link">Swag Store</a></p>
+                </div>
+                <div class="col-6 col-lg-2 mt-3">
+                    <p class="fs-5"><b class="text-black-50">Guides</b></p>
+                    <p><a href="" class="nav-link">Getting started</a></p>
+                    <p><a href="" class="nav-link">Starter template</a></p>
+                    <p><a href="" class="nav-link">Wepack</a></p>
+                    <p><a href="" class="nav-link">Packs</a></p>
+                    <p><a href="" class="nav-link">Vite</a></p>
+                </div>
+                <div class="col-6 col-lg-2 mt-3">
+                    <p class="fs-5"><b class="text-black-50">Projects</b></p>
+                    <p><a href="" class="nav-link">Bootstrap 5</a></p>
+                    <p><a href="" class="nav-link">Bootstrap 4</a></p>
+                    <p><a href="" class="nav-link">Icons</a></p>
+                    <p><a href="" class="nav-link">RFS</a></p>
+                    <p><a href="" class="nav-link">Examples repo</a></p>
+                </div>
+                <div class="col-6 col-lg-2 mt-3">
+                    <p class="fs-5"><b class="text-black-50">Community</b></p>
+                    <p><a href="" class="nav-link">Issues</a></p>
+                    <p><a href="" class="nav-link">Discussions</a></p>
+                    <p><a href="" class="nav-link">Corporate sponsers</a></p>
+                    <p><a href="" class="nav-link">Open Collective</a></p>
+                    <p><a href="" class="nav-link">Stack Ovrflow</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Script for highlight.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

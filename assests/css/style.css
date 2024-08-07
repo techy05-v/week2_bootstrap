@@ -1,0 +1,138 @@
+/* COMMON CLASS STYLE */
+
+/* Link Style */
+
+.no-style-link {
+    text-decoration: none;
+}
+
+.row {
+    --bs-gutter: 0;
+}
+
+/* Icon andd image styling */
+
+.icon {
+    color: white;
+}
+
+.image {
+    filter: invert(1);
+}
+
+
+/* Code styling */
+
+.terminal-font {
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+}
+
+
+/* HEADDER STYLING */
+
+/* Styling navbar */
+
+.navbar {
+    background-color: rgba(117, 51, 250, 0.959);
+}
+/* offcanvas content */
+.offcanvas {
+    background-color: rgba(117, 51, 250, 0.959) !important;
+}
+
+.offcanvas * {
+    color: white !important;
+}
+
+.offcanvas-drop-item {
+    color: black !important;
+}
+
+.navbar-drop-item {
+    color: white !important;
+}
+
+/* Search bar styling */
+.search {
+    background-color: #682CDF !important;
+}
+
+.search::placeholder {
+    color: white !important;
+}
+
+/* MAIN STYLING */
+
+.main-container {
+    position: relative;
+}
+
+/* Absolute gradient backgground */
+.gradient {
+    position: absolute;
+    background-image: linear-gradient(to right, #A2C8FE, #FFF7D5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Main contents */
+
+.main-update {
+    max-width: 350px;
+    background-color: #FFE484;
+    margin: 30px;
+}
+
+.code-version {
+    background-color: #dcdbdd8f;
+}
+
+.doc-btn {
+    background-color: rgb(117, 51, 250) !important;
+}
+
+/* Main sub styling */
+
+.head-icon {
+    width: 75px;
+    height: 75px;
+}
+
+.head-symbol-1 {
+    background-color: #F0E9FE;
+    color: #682CDF;
+}
+
+.head-symbol-2 {
+    background-color: #E6F0FF;
+    color: #0D6EFD;
+}
+
+.head-symbol-3 {
+    background-color: #FBEAF2;
+    color: #D63384;
+}
+
+.head-symbol-4 {
+    background-color: #FBEAEC;
+    color: #DC3545;
+}
+
+.head-symbol-5 {
+    background-color: #E6FAFD;
+    color: #0DCAF0;
+}
+
+.head-symbol-6 {
+    background-color: #FFF9E6;
+    color: #FFC107;
+}
+
+.head-symbol-7 {
+    background-color: #E8F9F4;
+    color: #20C997;
+}
